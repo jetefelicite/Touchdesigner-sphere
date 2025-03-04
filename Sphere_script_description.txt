@@ -1,0 +1,50 @@
+For audio-reactivity through internal microphones or MIDI controllers
+
+- From 'par1' to 'transform' in the 'Uniform Scale' section:
+op('par1')['Uniformscale']
+
+
+- From 'par1' to 'switch' in the 'Select Input' section:
+op('par1')['Switchshapes']
+
+
+- From 'par1' to 'Luma Blur' in the 'White Filter Width' section:
+op('par1')['Blur']
+
+
+- From 'par1' to 'Bloom
+in the 'Blur Size' section:
+op('par1')['Brightness']
+
+in the 'Threshold' section:
+op('par1')['Glowmat']
+
+in the 'Intensity' section:
+op('par1')['Intensity']
+
+in the 'Gamma' section:
+op('par1')['Gamma']
+
+
+
+
+For animation of the sphere
+- In the 'Transform' node:
+absTime.frame * 0.1 
+this is for rx and ry in the 'Rotate' section
+
+- In the 'SOP to' node:
+me.time.rate
+This helps maintain smooth and predictable movement by scaling values based on the timeline's frame rate
+
+- In the 'noise2' node:
+op("null2").numPoints in the 'End' section
+to scale or influence the noise based on the geometry's point count
+me.time.rate in the 'Frame Rate' section
+ensures that the noise behavior is consistent regardless of the FPS setting
+
+- In the 'noise3' node:
+op("null2").numPoints in the 'End' section
+gets the number of points in the sphere (null2), which helps scale the noise effect based on the complexity of the geometry
+me.time.rate in the 'Frame Rate' section
+retrieves the frames per second (FPS) of the timeline, adjusting the noise effect to maintain consistency across different frame rates

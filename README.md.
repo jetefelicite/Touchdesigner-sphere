@@ -1,0 +1,13 @@
+# Customizable 3D Sphere in TouchDesigner  
+
+This is a TouchDesigner project featuring a customizable moving sphere.  
+- Built using TouchDesigner  
+- Features real-time movement & customization  
+- Can be used in VJing setups  
+
+## How to Open  
+1. Download the `.toe` file from this repository.  
+2. Open it in TouchDesigner.  
+3. Adjust parameters to customize movement and appearance.  
+
+Created for my Computation Arts portfolio.  
